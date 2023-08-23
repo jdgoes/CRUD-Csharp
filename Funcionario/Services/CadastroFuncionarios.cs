@@ -1,7 +1,8 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Funcionario.DataAcess;
+using MySql.Data.MySqlClient;
 using System;
 
-namespace Funcionario
+namespace Funcionario.Services
 {
     class CadastroFuncionarios
     {
@@ -64,7 +65,7 @@ namespace Funcionario
             }
         }
 
-        public MySqlDataReader LocalizarOFuncionario ()
+        public MySqlDataReader LocalizarOFuncionario()
         {
             try
             {
@@ -74,7 +75,7 @@ namespace Funcionario
                 string select = $"SELECT id, nome, email, cpf, endereco FROM funcionarios WHERE cpf = '{Cpf}'; ";
                 MySqlCommand comandoSql = mysqlConexaoBanco.CreateCommand();
                 comandoSql.CommandText = select;
-                
+
                 MySqlDataReader reader = comandoSql.ExecuteReader();
                 return reader;
             }
@@ -82,7 +83,7 @@ namespace Funcionario
             {
                 MessageBox.Show($"Erro no banco de dados {ex.Message}");
                 return null;
-            }   
+            }
         }
 
         public bool AtualizarFuncionario()
@@ -107,7 +108,7 @@ namespace Funcionario
             }
         }
 
-        public bool DeletarFuncionario ()
+        public bool DeletarFuncionario()
         {
             try
             {

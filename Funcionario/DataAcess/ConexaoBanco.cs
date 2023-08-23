@@ -1,8 +1,8 @@
-﻿namespace Funcionario
+﻿namespace Funcionario.DataAcess
 {
     static class ConexaoBanco
     {
-  
+
         private const string servidor = "localhost";
         private const string bancoDados = "dbFuncionarios";
         private const string usuario = "root";

@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Funcionario
+namespace Funcionario.Utils
 {
     public static class Validacoes
     {
