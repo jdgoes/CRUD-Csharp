@@ -44,7 +44,6 @@
             BtnLimpar = new Button();
             BtnAtualizar = new Button();
             BtnDeletar = new Button();
-            colorDialog1 = new ColorDialog();
             SuspendLayout();
             // 
             // Nome
@@ -238,10 +237,11 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Nome);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Database Funcionarios";
+            Text = "CRUD C#";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,6 +263,5 @@
         private Button BtnLimpar;
         private Button BtnAtualizar;
         private Button BtnDeletar;
-        private ColorDialog colorDialog1;
     }
 }
